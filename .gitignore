@@ -136,3 +136,6 @@ venv.bak/
 .vscode/
 
 wiki/
+
+# Third party plugins
+wisecreator/third_party/KindleUnpack
