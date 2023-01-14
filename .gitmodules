@@ -1,0 +1,3 @@
+[submodule "wisecreator/third_party/KindleUnpack"]
+	path = wisecreator/third_party/KindleUnpack
+	url = http://github.com/kevinhendricks/KindleUnpack.git

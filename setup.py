@@ -14,8 +14,6 @@ class PostDevelopCommand(develop):
 
 class PostInstallCommand(install):
     def run(self):
-        import git
-        git.Git("wisecreator/third_party").clone("http://github.com/kevinhendricks/KindleUnpack.git")
         install_nltk_data()
         install.run(self)
 
@@ -32,8 +30,7 @@ setup(
         'nltk==3.7',
         'cursor==1.3.4',
         'six==1.12.0',
-        'dataclasses',
-        "gitpython"
+        'dataclasses'
     ],
     setup_requires=[
         'nltk==3.7',
