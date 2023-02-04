@@ -18,6 +18,7 @@
 ## How to use
 
 You can create wordwise enabled books for Amazon Kindle by using
+
 - either [standalone executables](#standalone) or
 - [pure python script](#script) (runs faster)
 
@@ -25,28 +26,27 @@ To enable wordwise, the lang meta data of your .mobi files should be set to `eng
 
 ---
 
-## standalone
+## Standalone release
 
 1. You need to have [calibre](https://calibre-ebook.com/) on your device.
 2. Go to [Releases](https://github.com/tmilovanov/wisecreator/releases) and download wisecreator version for your operating system (`wisecreator.exe` for windows, `wisecreator` for linux)
 3. Finally run the below commands in a shell  
-    Windows: `wisecreator.exe PATH_TO_YOUR_MOBI_BOOK`   
+    Windows: `wisecreator.exe PATH_TO_YOUR_MOBI_BOOK`
     Linux &nbsp; &nbsp; &nbsp;: `./wisecreator PATH_TO_YOUR_MOBI_BOOK`
 
 *You can move standalone wisecreator file anywhere you like on your computer, but if you are using calibre portable, make sure you add  your calibre portable folder to the PATH environment variable*  
 
-## script
+## Script
 
-1.  Install [calibre](https://calibre-ebook.com/)
-2.  Download and install [Python3](https://www.python.org/downloads/).
+1. Install [calibre](https://calibre-ebook.com/)
+2. Download and install [Python3](https://www.python.org/downloads/).
     If your python has been build from source install `pysqlite3` additionally
-3.  From this project folder run
-```
-    python3 -m pip install wheel
-    python3 -m pip install .
-```
-4.  From this project folder run 
-5.  Finally run wisecreator: `python3 -m wisecreator.main PATH_TO_YOUR_BOOK`
+3. Clone this repository
+    1. Use `git clone --recursive [URL to Git repo]` to clone the repo with submodules
+4. From this project folder run
+   1. python3 -m pip install wheel
+   2. python3 -m pip install .
+5. Finally from wisecreator folder run: `python3 -m wisecreator.main PATH_TO_YOUR_BOOK`
 
 ---
 
@@ -60,4 +60,3 @@ To enable wordwise, the lang meta data of your .mobi files should be set to `eng
 6. set the permissions for the wordwise file by running `chcon u:object_r:app_data_file:s0:c512,c768 [filename].db` from a terminal emulator app or via adb shell at the above path.
 
 ---
-

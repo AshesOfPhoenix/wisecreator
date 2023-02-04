@@ -33,8 +33,7 @@ setup(
         'dataclasses'
     ],
     setup_requires=[
-        'nltk==3.7',
-        'gitpython'
+        'nltk==3.7'
     ],
     cmdclass={
       'install': PostInstallCommand,
